@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <div>Home</div>
-      <p>This is a Home Page</p>
+      <p>This is a Home Page.</p>
       {/* <Button default>Button</Button>
       <Button>Button</Button>
       <GhostButton>GhostButton</GhostButton> */}
