@@ -1,14 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-	* {
+    * {
         box-sizing: border-box;
     }
     body {
         font-size: 16px;
         line-height: 1.5;
         font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
-        color: '#222';
+        color: #222;
     }
 
     /* desktop */
@@ -25,13 +25,13 @@ const GlobalStyle = createGlobalStyle`
     input[type='password'] {
         font-family: 'Malgun Gothic';
     }
-		a{
-			text-decoration: none;
-		}
+
+    a {
+        text-decoration: none;
+    }
 
     /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
     /* skipnavigation */
-
     #u-skip {
         position: relative;
         z-index: 3000;
@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
             color: #fff;
             text-decoration: none;
             text-align: center;
-            opacity: 0;						
+            opacity: 0;
 
             &:focus {
                 top: 0;
@@ -64,6 +64,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 0;
         text-indent: -9999px;
     }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

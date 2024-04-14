@@ -1,17 +1,15 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../../common/Logo';
-import Button from '../../common/Button';
+import Button, { GhostButton } from '../button/Button';
 import tw from 'twin.macro';
+import styled from 'styled-components';
 
-const Header = () => {
+function Header() {
   const location = useLocation();
 
   return (
-    <header className="flex items-center justify-between p-4 border-b-2 bg-secondary bg-gray-500">
-      <h1 className="text-3xl font-bold text-purple-700">Logo</h1>
+    <header className="flex flex-col items-center justify-between p-5 border-2 border-gray-600 bg-primary">
+      <h1 className="text-3xl font-bold text-secondary">logo</h1>
       <Gnb>
-        {/* <ul className="flex gap-6 text-2xl"> */}
         <ul>
           <li className={location.pathname === '/' ? 'active' : ''}>
             <Link to="/">Home</Link>
@@ -24,22 +22,31 @@ const Header = () => {
           </li>
         </ul>
       </Gnb>
-
-      <div>
+      <Util>
         <Button default>마이페이지</Button>
         <Button>마이페이지</Button>
-      </div>
+      </Util>
     </header>
   );
-};
+}
 
 // const Gnb = tw.nav`
-//   bg-primary p-3
-// `;
-const Gnb = tw.nav`
-  ul{
+//     bg-secondary p-3
+// `
+
+const Util = styled.div`
+  ${tw`hidden md:block`}
+`;
+
+const Gnb = styled.nav`
+  ul {
     ${tw`flex gap-6`}
   }
-// `;
+  li {
+    a {
+      ${tw`text-white`}
+    }
+  }
+`;
 
 export default Header;
